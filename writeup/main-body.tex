@@ -1,7 +1,14 @@
 \section{Introduction}
-This project uses the ANI-1 framework. \cite{smith2017ani}
 
-\lipsum[2]
+Understanding and predicting the behavior of molecules and materials at the atomic level is fundamental to advancements across various scientific disciplines, including drug discovery, materials science, and catalysis \cite{wang2018silico, dominy2004native, cicaloni2019applications}. Accurate computational modeling allows researchers to explore chemical space, predict reaction outcomes, and design novel functional materials without the need for costly and time-consuming physical experiments.
+
+At the heart of highly accurate computational methods lies quantum mechanics. Density Functional Theory (DFT) is a prominent approach that offers a favorable balance between accuracy and computational tractability for many systems \cite{engel2011density}. Instead of solving the complex many-body Schrödinger equation directly, DFT cleverly recasts the problem in terms of the electron density, $\rho(\mathbf{r})$. The core idea is that the ground state energy and all other ground state properties are unique functionals of the ground state electron density, $E_0 = E[\rho_0]$. In practice, DFT often relies on solving the Kohn-Sham equations, a set of single-particle equations that yield the electron density of the interacting system.
+
+Despite the successes of DFT, a significant challenge remains in balancing computational accuracy with efficiency. The computational cost of DFT calculations typically scales unfavorably, limiting its application to relatively small systems or short simulation timescales \cite{engel2011density, cohen2012challenges}. Conversely, classical force fields, which use simplified, empirically parameterized functions to describe interatomic interactions, offer computational efficiency suitable for large-scale simulations (millions of atoms) and long timescales. However, these force fields often lack the necessary accuracy and transferability, especially for systems involving chemical reactions, complex electronic effects, or environments significantly different from those used in their parameterization \cite{herbers2013grand}.
+
+This project utilizes the Atomic Environment Vector (AEV) representation developed as part of the ANI (Accurate Neural Network engine for Molecular Energies) framework, specifically the ANI-1 potential described by Smith et al.. \cite{smith2017ani} The ANI-1 potential and its associated AEVs demonstrated the ability to achieve near-DFT accuracy for predicting molecular energies and forces but at a significantly reduced computational expense, comparable to traditional force fields. The AEVs provide a fixed-size, symmetry-invariant descriptor of an atom's local chemical environment, making them suitable inputs for neural network models. In this work, these AEVS are leveraged to predict the energies of small organic molecules comprising solely of H, C, N, and O atoms.
+
+TODO unfinished
 
 \section{Methods}
 \lipsum[3]
