@@ -2,7 +2,30 @@
 
 TODO abstract
 
-## TODO Directory Structure
+## Directory Structure
 
 ```bash
+.
+├── README.md # this file
+├── checkpoints # Jupyter notebook checkpoints
+│   ├── checkpoint1.ipynb
+│   ├── checkpoint2.ipynb
+│   ├── checkpoint3.ipynb
+│   └── checkpoint4.ipynb
+├── data # the GDB 4 heavy atom dataset used
+│   └── ani_gdb_s01_to_s04.h5
+├── environment.yml # the conda environment file
+├── instructions # instructor instruction pdfs
+│   ├── ANI.pdf
+│   ├── FINALSPROJECT_142_242.pdf
+│   └── Final project guidelines.pdf
+├── main-project-notebook.ipynb # the final model training and eval notebook
+├── models # the trained models
+│   ├── ff_celu_model.pth # CELU-activated ANN
+│   └── ff_relu_model.pth # RELU-activated ANN
+└── writeup # latex files for the final writeup
+    ├── main-body.tex
+    ├── main.pdf
+    ├── main.tex
+    └── references.bib
 ```
