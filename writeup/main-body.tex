@@ -4,11 +4,11 @@ Understanding and predicting the behavior of molecules and materials at the atom
 
 At the heart of highly accurate computational methods lies quantum mechanics. Density Functional Theory (DFT) is a prominent approach that offers a favorable balance between accuracy and computational tractability for many systems \cite{engel2011density}. Instead of solving the complex many-body Schrödinger equation directly, DFT cleverly recasts the problem in terms of the electron density, $\rho(\mathbf{r})$. The core idea is that the ground state energy and all other ground state properties are unique functionals of the ground state electron density, $E_0 = E[\rho_0]$. In practice, DFT often relies on solving the Kohn-Sham equations, a set of single-particle equations that yield the electron density of the interacting system.
 
-Despite the successes of DFT, a significant challenge remains in balancing computational accuracy with efficiency. The computational cost of DFT calculations typically scales unfavorably, limiting its application to relatively small systems or short simulation timescales \cite{engel2011density, cohen2012challenges}. Conversely, classical force fields, which use simplified, empirically parameterized functions to describe interatomic interactions, offer computational efficiency suitable for large-scale simulations (millions of atoms) and long timescales. However, these force fields often lack the necessary accuracy and transferability, especially for systems involving chemical reactions, complex electronic effects, or environments significantly different from those used in their parameterization \cite{herbers2013grand}.
+Despite the successes of DFT, a significant challenge remains in balancing computational accuracy with efficiency. The computational cost of DFT calculations scales cubically, limiting its application to relatively small systems or short simulation timescales \cite{engel2011density, cohen2012challenges}. Conversely, classical force fields, which use simplified, empirically parameterized functions to describe interatomic interactions, offer computational efficiency suitable for large-scale simulations (millions of atoms) and long timescales. However, these force fields often lack the necessary accuracy and transferability, especially for systems involving chemical reactions, complex electronic effects, or environments significantly different from those used in their parameterization \cite{herbers2013grand}.
 
-This project utilizes the Atomic Environment Vector (AEV) representation developed as part of the ANI (Accurate Neural Network engine for Molecular Energies) framework, specifically the ANI-1 potential described by Smith et al.. \cite{smith2017ani} The ANI-1 potential and its associated AEVs demonstrated the ability to achieve near-DFT accuracy for predicting molecular energies and forces but at a significantly reduced computational expense, comparable to traditional force fields. The AEVs provide a fixed-size, symmetry-invariant descriptor of an atom's local chemical environment, making them suitable inputs for neural network models. In this work, these AEVS are leveraged to predict the energies of small organic molecules comprising solely of H, C, N, and O atoms.
+To address the computational drawbacks of full DFT calculations, many machine-learning based approaches offer massive speedups. One landmark approach encodes molecules with an Atomic Environment Vector (AEV) representation, developed as part of the ANI framework, specifically the ANI-1 potential described by Smith et al.. \cite{smith2017ani} The ANI-1 potential and its associated AEVs demonstrated the ability to achieve near-DFT accuracy for predicting molecular energies and forces but at a significantly reduced computational expense, comparable to traditional force fields. The AEVs provide a fixed-size, symmetry and permutation-invariant descriptor of an atom's local chemical environment, making them suitable inputs for simpler neural network models by essentially enforcing a hard prior that the local environment contains all relevant energy information. The approach has been shown to be effective and easily extensible for a wide range of molecular systems, including organic molecules and biomolecules, and has been eimproved for larger systems and applications. \cite{devereux2020extending}
 
-TODO unfinished
+Here, I TODO
 
 \section{Methods}
 \lipsum[3]
@@ -18,5 +18,9 @@ TODO unfinished
 
 \section{Discussion}
 \lipsum[5]
+
+\section{Code Availability}
+
+All code and data used in this project are available on GitHub at \url{https://github.com/Qile0317/bioe142-final-project}.
 
 \printbibliography[heading=bibnumbered]
