@@ -22,10 +22,18 @@ The dataset used for training and evaluation was split into 80\% training, 10\% 
 
 All training was conducted using the Adam optimizer, which is well-suited for handling sparse gradients and adaptive learning rates. Hyperparameters, including batch size, learning rate, number of epochs, and L2 regularization strength, were manually tuned through an iterative process to optimize the model's performance. Early stopping was employed based on the validation loss to prevent overfitting and ensure that the model did not continue training once its performance on unseen data began to degrade.
 
-To accelerate computation and enable the training of more complex models, all computations were conducted on an NVIDIA RTX3050 laptop GPU through a windows subsystem for linux. This setup provided sufficient computational power to handle the dataset and the computational demands of training neural networks of this. The final model was selected based on the lowest validation MAE observed during training. Once selected, the model was evaluated on the held-out test set to report its performance, ensuring that the reported results reflect its ability to generalize to unseen data.
+To accelerate computation and enable the training of more complex models, all computations were conducted on an NVIDIA RTX3050 laptop GPU through a windows subsystem for linux on the x86-64 architecture with 32GB of RAM. This setup provided sufficient computational power to handle the dataset and the computational demands of training neural networks of this. The final model was selected based on the lowest validation MAE observed during training. Once selected, the model was evaluated on the held-out test set to report its performance, ensuring that the reported results reflect its ability to generalize to unseen data.
 
 \section{Results}
 
+The best model architecture was a set of four simple Feedforward networks with a single hidden layer of 128 weights that used a ReLU activation function, making up 197636 learnable parameters in total.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics{figures/bioe142.png}
+    \caption{Performance comparison of the best model architecture on the test set.}
+    \label{fig:performance_comparison}
+\end{figure}
 
 \section{Discussion}
 \lipsum[5]
