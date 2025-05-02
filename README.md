@@ -2,6 +2,23 @@
 
 TODO abstract
 
+## Usage
+
+To get to the same environment as the one used for this project's models, you can use the provided conda `environment.yml` file. In general, to just get the actual model in python, do the following:
+
+1. Clone the repository with:
+
+```bash
+git clone https://github.com/Qile0317/bioe142-final-project.git
+```
+
+2. Load pytorch and load the model pth file:
+
+```python
+import torch
+model = torch.load('models/ff_relu_model.pth')
+```
+
 ## Directory Structure
 
 ```bash
