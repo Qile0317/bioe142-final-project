@@ -1,6 +1,6 @@
 # Final project for Bioengineering C142, Spring 2025 at UC Berkeley
 
-TODO abstract
+**Abstract:** I introduce a streamlined machine-learning potential that delivers density-functional accuracy for small CHON molecules at force-field speed. Using the ANI Atomic Environment Vector descriptor and TorchANI, I trained element-specific feed-forward networks on a curated GDB subset. An architecture sweep identified a single-hidden-layer model (128 neurons per element; 197K parameters) as the best. With Adam optimisation, the model attains an RMSE of 1.03 kcal on an unseen test set while retaining laptop-scale training (~minutes on an RTX 3050). ReLU activations outperformed CELU variants. Overall, a much more compressed model than the original ANI-1 potential was achieved, with a similar performance on the small organic molecule dataset.
 
 ## Usage
 
